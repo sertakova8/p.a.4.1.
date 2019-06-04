@@ -1,0 +1,22 @@
+n = int(input("Введите к-во чисел, которые вы хотели бы отсортировать: "))
+
+from random import randint
+a = []
+for i in range(n):
+    a.append(randint(0, 100))
+
+def SelectionSort(sort):
+    max_index = len(a) - 1
+    for i in range(0, max_index):
+        m = i
+        j = i + 1
+        while j < len(sort):
+            if sort[j] < sort[m]:
+                m = j
+            j = j + 1
+        sort[i], sort[m] = sort[m], sort[i]
+        print(a)
+
+print("До сортировки: ", a)
+SelectionSort(a)
+print("После сортировки: ", a)
