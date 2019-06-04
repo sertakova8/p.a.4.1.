@@ -1,0 +1,18 @@
+from random import randint
+n = 10
+a = []
+for i in range(n):
+    a.append(randint(0, 100))
+
+def BubbleSort(sort):
+    max_index = len(sort) - 1
+    for b in range(0, max_index):
+        for c in range(0, max_index):
+            if sort[c + 1] < sort[c]:
+                sort[c + 1], sort[c] = sort[c], sort[c + 1]
+                print(a)
+    return (sort)
+
+print("До сортировки: ", a)
+after_sorting = BubbleSort(a)
+print("После сортирвоки: ", after_sorting)
