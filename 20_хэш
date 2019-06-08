@@ -9,3 +9,5 @@ def hash8(message, table):
     for i in message:
         hash = table[(hash + ord(i)) % 256]
 return hash
+
+test git
